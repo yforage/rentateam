@@ -6,7 +6,8 @@
   "author": "yforage",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "cd .. && npm run build"
   },
   "dependencies": {
     "express": "^4.17.3"
