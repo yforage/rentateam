@@ -5,9 +5,10 @@
   "author": "yforage",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development npx webpack serve --mode=development",
+    "start": "serve -s build",
     "build": "NODE_ENV=production npx webpack --mode=production",
-    "ts-check": "tsc --skipLibCheck --noEmit --project tsconfig.json"
+    "ts-check": "tsc --skipLibCheck --noEmit --project tsconfig.json",
+    "deploy": "git push heroku master"
   },
   "browserslist": [
     "last 1 version",
