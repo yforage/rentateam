@@ -1,0 +1,245 @@
+[
+  {
+    "id": 1,
+    "name": "Cheeseburger",
+    "price": 79,
+    "delivery": false,
+    "img": "https://s82079.cdn.ngenix.net/330x0/X4eyRrugynKehEm2Wr8YEZeo.png",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 2,
+    "name": "Chefburger Junior Hot and Spicy",
+    "price": 109,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/etZVHiWewqH6XqEsShD4Axz9.png",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 3,
+    "name": "Chefburger Junior original new",
+    "price": 109,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/Jtt1xXNpgBaXhvbXXgNzJCSo.png",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 4,
+    "name": "Chefburger Hot and Spicy",
+    "price": 139,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/nyt79dy2gTrx5v595yXYuXAr.png",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 5,
+    "name": "Chefburger original new",
+    "price": 139,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/6vN4HWJJUP4AYZfMg37LsuDv.png",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 6,
+    "name": "De Luxe Chefburger Hot and Spicy",
+    "price": 164,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/wK4fLvNXD4NKZJUrVgjPV383.png",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 7,
+    "name": "De Luxe Chefburger",
+    "price": 164,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/VnEgcf2wCjgJZQeR58mvtzUB.png",
+    "newProduct": false,
+    "hit": true
+  },
+  {
+    "id": 8,
+    "name": "Sanders burger spicy",
+    "price": 199,
+    "delivery": false,
+    "img": "https://s82079.cdn.ngenix.net/330x0/kvx0gh0u77jkmzed9k3gri561jtf",
+    "newProduct": true,
+    "hit": false
+  },
+  {
+    "id": 10,
+    "name": "Sanders burger original",
+    "price": 199,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/n3i4cyr0l02td6p8176830syt3qj",
+    "newProduct": true,
+    "hit": false
+  },
+  {
+    "id": 11,
+    "name": "Sanders De Luxe burger spicy",
+    "price": 229,
+    "delivery": false,
+    "img": "https://s82079.cdn.ngenix.net/330x0/k05jnlzwuhslbr2ilc80xfhlxg59",
+    "newProduct": true,
+    "hit": false
+  },
+  {
+    "id": 12,
+    "name": "Sanders De Luxe burger original",
+    "price": 229,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/l2p6pk6wwed6ulbxeot1th413z9h",
+    "newProduct": true,
+    "hit": false
+  },
+  {
+    "id": 13,
+    "name": "Big Sanders burger spicy",
+    "price": 249,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/9vqa9w3figvmb9b9qh4machdcebi",
+    "newProduct": true,
+    "hit": false
+  },
+  {
+    "id": 14,
+    "name": "Big Sanders burger original",
+    "price": 249,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/pgd13bpxbpzy8jjukx3o2bv7thca",
+    "newProduct": true,
+    "hit": false
+  },
+  {
+    "id": 15,
+    "name": "I-Twister",
+    "price": 55,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/HhmEJfoxHjknW4nhEM3HmHs2.png",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 16,
+    "name": "Twister Junior",
+    "price": 109,
+    "delivery": false,
+    "img": "https://s82079.cdn.ngenix.net/330x0/7eM97nAz7pXzSbTNHPaC76VT.png",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 17,
+    "name": "Twister Hot and Spicy",
+    "price": 179,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/ogn97hthc1tfrzst377c7soj0auc",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 18,
+    "name": "Twister original",
+    "price": 179,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/gVuS5qWLXj8oZgfRUSN9x3wv.png",
+    "newProduct": false,
+    "hit": true
+  },
+  {
+    "id": 19,
+    "name": "Twister De Luxe Spicy",
+    "price": 199,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/v1NR8JHrjiBTEDHXdPBfzz21.png",
+    "newProduct": false,
+    "hit": true
+  },
+  {
+    "id": 20,
+    "name": "Twister De Luxe Original",
+    "price": 199,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/v1NR8JHrjiBTEDHXdPBfzz21.png",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 21,
+    "name": "Boxmaster special spicy",
+    "price": 224,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/knhi839y3pxt45ztp4k6apnopgky",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 22,
+    "name": "Boxmaster special original",
+    "price": 224,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/b69hybvhkh8w3tpsfynwow5h7tqd",
+    "newProduct": false,
+    "hit": true
+  },
+  {
+    "id": 23,
+    "name": "Party Box",
+    "price": 129,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/rjfy6se94anzqpno4gleqiz67ynp",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 24,
+    "name": "Sanders wedges",
+    "price": 144,
+    "delivery": false,
+    "img": "https://s82079.cdn.ngenix.net/330x0/oecrbl9b7ecwi4tytm13j8verlhu",
+    "newProduct": true,
+    "hit": false
+  },
+  {
+    "id": 25,
+    "name": "Sanders french fries",
+    "price": 144,
+    "delivery": false,
+    "img": "https://s82079.cdn.ngenix.net/330x0/hnm5rs63rczv3sum22nju3ti8u3d",
+    "newProduct": true,
+    "hit": false
+  },
+  {
+    "id": 26,
+    "name": "Cheese pillows",
+    "price": 79,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/cgU1tWPHTBj4WDX3m43MR1kx.png",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 27,
+    "name": "Potato wedges",
+    "price": 89,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/t4ekgqi7roq6PPpiXciRkhtu.png",
+    "newProduct": false,
+    "hit": false
+  },
+  {
+    "id": 28,
+    "name": "Fries",
+    "price": 54,
+    "delivery": true,
+    "img": "https://s82079.cdn.ngenix.net/330x0/9fh3NYyrKj4pm41ERm8jG2E6.png",
+    "newProduct": false,
+    "hit": true
+  }
+]

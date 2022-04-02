@@ -1,0 +1,24 @@
+@import 'styles/variables.scss';
+
+.Sticker {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $text-accent;
+  border-radius: $border-radius-round;
+  font-weight: 700;
+  font-family: $font-family-bold;
+  font-size: $font-size-tip;
+}
+
+.new {
+  background-color: $color-accent;
+}
+
+.hit {
+  background-color: $color-tip;
+}

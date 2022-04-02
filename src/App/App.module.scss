@@ -1,0 +1,9 @@
+@import 'styles/variables.scss';
+
+.fullViewportHeight {
+  min-height: 100vh;
+}
+
+.App {
+  background-color: $color-main;
+}

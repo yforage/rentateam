@@ -1,0 +1,41 @@
+@import 'styles/variables.scss';
+
+.Delivery {
+  margin-top: 100px;
+
+  &_header {
+    font-family: $font-family-bold;
+    font-size: $font-size-header;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+    &_selector {
+      display: flex;
+      align-items: center;
+      height: 48px;
+
+      font-family: $font-family-light;
+      font-size: $font-size-main;
+      font-weight: 400;
+
+      background-color: $color-secondary;
+      color: $text-main;
+      border-radius: $border-radius-main;
+
+      &_button {
+        padding: 12px 17px;
+      }
+
+      &_selected {
+        border-radius: $border-radius-main;
+        background-color: $color-accent;
+        color: $text-accent;
+      }
+    }
+  }
+}

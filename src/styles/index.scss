@@ -1,0 +1,66 @@
+@import './variables.scss';
+
+body {
+	font-family: $font-family-main;
+	font-style: normal;
+	font-weight: 400;
+	font-size: $font-size-main;
+	color: $text-header;
+	background-color: $color-main;
+
+	margin: 0;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.content {
+  padding-left: 30px;
+	padding-right: 30px;
+}
+
+@media (min-width: 450px) {
+	.content {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+@media (min-width: 600px) {
+	.content {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+}
+
+@media (min-width: 750px) {
+	.content {
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+}
+
+@media (min-width: 900px) {
+	.content {
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+}
+
+@media (min-width: 1200) {
+	.content {
+		padding-left: 110px;
+		padding-right: 110px;
+	}
+}

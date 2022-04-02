@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Burgers",
+    "products": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  },
+  {
+    "id": 2,
+    "name": "Wraps",
+    "products": [15, 16, 17, 18, 19, 20, 21]
+  },
+  {
+    "id": 3,
+    "name": "French fries and snacks",
+    "products": [22, 23, 24, 25, 26, 27]
+  }
+]

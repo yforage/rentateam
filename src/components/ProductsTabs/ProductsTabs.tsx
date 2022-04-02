@@ -1,0 +1,41 @@
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'store/rootReducer';
+import { selectCategorie } from 'store/categories/categoriesSlice';
+import classNames from 'classnames';
+import Button from 'components/Button';
+import styles from './ProductsTabs.module.scss';
+
+const ProductsTabs: React.FC = () => {
+  const selectedTab = useSelector((state: RootState) => state.categories.selected);
+  const categories = useSelector((state: RootState) => state.categories.categories);
+
+  const dispatch = useDispatch();
+
+  const handleScroll = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const id = e.currentTarget.value;
+    dispatch(selectCategorie(Number(id)));
+    const categorie = document.getElementById(`categorie-${id}`);
+    categorie?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <div className={classNames(styles.ProductsTabs, 'content')}>
+      {categories.map(({ id, name }) => (
+        <Button
+          value={id.toString()}
+          onClick={handleScroll}
+          className={classNames(
+            styles.ProductsTabs_button,
+            { [styles.ProductsTabs_selected]: selectedTab === id },
+          )}
+          key={id}
+        >
+          {name}
+        </Button>
+      ))}
+    </div>
+  );
+};
+
+export default React.memo(ProductsTabs);

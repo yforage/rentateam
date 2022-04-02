@@ -1,0 +1,12 @@
+@import "styles/variables.scss";
+
+.Cart {
+  height: 36px;
+  padding: 5px 10px;
+
+  color: $text-accent;
+
+  background-color: $color-accent;
+  border-radius: $border-radius-button;
+  font-size: $font-size-cart;
+}

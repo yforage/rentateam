@@ -1,0 +1,19 @@
+.Footer {
+  padding-bottom: 75px;
+
+  &_info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 150px;
+    flex-wrap: wrap;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &_links {
+    margin-top: 120px;
+  }
+}

@@ -1,0 +1,38 @@
+@import 'styles/variables.scss';
+
+.Links {
+  display: flex;
+  flex-wrap: wrap;
+
+  &_icons {
+    color: $text-header;
+  }
+
+  &_left, &_stores {
+    flex: 1;
+  }
+
+  &_icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &_stores {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+
+
+  @media (max-width: 800px) {
+    &_left, &_stores {
+      flex: 0;
+    }
+
+    & {
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+}

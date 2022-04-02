@@ -1,0 +1,35 @@
+@import 'styles/variables.scss';
+
+.ProductsTabs {
+  margin-top: 71px;
+  padding-top: 12px;
+
+  z-index: 1;
+  display: flex;
+  gap: 30px;
+
+  width: 100%;
+
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+
+  background-color: $color-main;
+
+
+  color: $text-main;
+  font-size: $font-size-tab;
+
+  &_button {
+    padding-bottom: 12px;
+  }
+
+  &_button:not(&_selected):hover {
+    color: $text-header;
+  }
+
+  &_selected {
+    color: $color-accent;
+    border-bottom: 2px solid $color-accent;
+  }
+}

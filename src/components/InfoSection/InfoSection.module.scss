@@ -1,0 +1,21 @@
+@import "styles/variables.scss";
+
+.InfoSection {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  min-width: 0;
+
+  &_title {
+    font-size: $font-size-sub-header;
+    margin-bottom: 23px;
+  }
+
+  &_link {
+    color: $text-main;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

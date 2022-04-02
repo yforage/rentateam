@@ -1,0 +1,53 @@
+@import 'styles/variables.scss';
+
+.Address {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 43px;
+  margin-top: 47px;
+
+  &_field {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &_name {
+      font-size: $font-size-sub-header;
+      display: flex;
+      align-items: center;
+    }
+
+    &_input {
+      font-family: $font-family-light;
+      background-color: $color-secondary;
+      border: none;
+      padding: 10px 16px;
+      outline-color: $color-accent;
+      margin-left: 12px;
+
+    }
+  }
+}
+
+.Tooltip {
+  position: absolute;
+  top: calc(100% + 16px);
+  white-space: nowrap;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+  background-color: $color-tip;
+  color: $text-accent;
+
+  text-align: center;
+  font-family: $font-family-bold;
+  font-weight: 700;
+  font-size: $font-size-tab;
+
+  &_arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-25%);
+  }
+}

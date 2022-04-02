@@ -1,0 +1,6 @@
+/build
+/node_modules
+/.vscode
+/server/node_modules
+
+.eslintrc.json

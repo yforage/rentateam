@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Company",
+    "links": ["Kitchen tours", "Business with KFC", "Composition of dishes", "About company", "KFC Battle", "KFC supports", "Responsible Disclosure"]
+  },
+  {
+    "title": "Career",
+    "links": ["University", "Vacancies", "Questionnaire"]
+  },
+  {
+    "title": "Social Networks",
+    "links": ["VK", "Youtube"]
+  },
+  {
+    "title": "Contact us",
+    "links": ["Feedback form", "For press", "For employees"]
+  }
+]

@@ -1,0 +1,37 @@
+@import "styles/variables.scss";
+
+.Categorie {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+
+  scroll-margin-top: 40px;
+
+  &:nth-child(odd) {
+    background-color: $color-secondary;
+  }
+
+  &:nth-child(odd) &_products_item:hover {
+    background-color: $color-main;
+  }
+
+  &:nth-child(even) &_products_item:hover {
+    background-color: $color-secondary;
+  }
+
+  &_title {
+    font-size: $font-size-sub-header;
+    margin-bottom: 32px;
+  }
+
+  &_products {
+    display: flex;
+    gap: 44px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &_item {
+      flex: 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import 'styles/variables.scss';
+
+.HandleCount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+
+  background-color: $color-tip;
+  color: $text-accent;
+  font-size: $font-size-cart;
+  padding: 0 14px;
+  gap: 10px;
+  border-radius: $border-radius-button;
+}
