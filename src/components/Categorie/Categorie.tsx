@@ -17,11 +17,15 @@ const Categorie: React.FC<ICategorie> = ({ id, name, products }) => {
   const dispatch = useDispatch();
 
   const ref = useRef<HTMLDivElement>(null);
-  const isVisible = useOnScreen(ref);
+  const isVisible = useOnScreen(ref, '-47px');
 
   useEffect(() => {
-    if (isVisible) dispatch(selectCategorie(id));
+    if (isVisible) {
+      dispatch(selectCategorie(id));
+    }
   }, [isVisible]);
+
+  console.log(isVisible, name);
 
   return (
     <div
