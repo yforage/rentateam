@@ -3,12 +3,13 @@ import AddIcon from 'components/AddIcon';
 import Button from 'components/Button';
 import HandleCount from 'components/HandleCount';
 import Sticker from 'components/Sticker';
-import React from 'react';
+import React, { useCallback, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from 'store/cart/cartSlice';
 import { PickupOptions } from 'store/pickup/pickupSlice';
 import { IProduct } from 'store/products/types';
 import { RootState } from 'store/rootReducer';
+import useOnScreen from 'utils/useOnScreen';
 import styles from './Product.module.scss';
 
 type ProductProps = {
@@ -31,20 +32,25 @@ const Product: React.FC<ProductProps> = ({ className, product }) => {
 
   const dispatch = useDispatch();
 
-  const handleAdd = () => {
+  const handleAdd = useCallback(() => {
     dispatch(addToCart(product));
-  };
+  }, []);
 
-  const handleRemove = () => {
+  const handleRemove = useCallback(() => {
     dispatch(removeFromCart(product.id));
-  };
+  }, []);
+
+  const ref = useRef<HTMLImageElement>(null);
+  const isImageVisible = useOnScreen(ref, '100px');
 
   if (isDelivery && !delivery) return null;
 
   return (
     <div className={classNames(styles.Product, className)}>
-      <div className={styles.Product_image}>
-        <img className={styles.Product_image_src} src={img} alt={product.name} loading="lazy" />
+      <div className={styles.Product_display}>
+        <div className={styles.Product_image} ref={ref}>
+          {isImageVisible && <img className={styles.Product_image_src} src={img} alt={product.name} loading="lazy" />}
+        </div>
         {hit && <Sticker className={styles.Product_sticker} type="hit" />}
         {newProduct && <Sticker className={styles.Product_sticker} type="new" />}
         {isAdd && (
