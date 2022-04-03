@@ -6,7 +6,6 @@ import Sticker from 'components/Sticker';
 import React, { useCallback, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from 'store/cart/cartSlice';
-import { PickupOptions } from 'store/pickup/pickupSlice';
 import { IProduct } from 'store/products/types';
 import { RootState } from 'store/rootReducer';
 import useOnScreen from 'utils/useOnScreen';
@@ -19,10 +18,9 @@ type ProductProps = {
 
 const Product: React.FC<ProductProps> = ({ className, product }) => {
   const {
-    name, price, delivery, img, newProduct, hit,
+    name, price, img, newProduct, hit,
   } = product;
 
-  const isDelivery = useSelector((state: RootState) => state.pickup === PickupOptions.delivery);
   const inCartCount = useSelector((state: RootState) => state.cart.reduce((acc, curr) => {
     if (curr.id === product.id) acc += 1;
     return acc;
@@ -42,8 +40,6 @@ const Product: React.FC<ProductProps> = ({ className, product }) => {
 
   const ref = useRef<HTMLImageElement>(null);
   const isImageVisible = useOnScreen(ref, '100px');
-
-  if (isDelivery && !delivery) return null;
 
   return (
     <div className={classNames(styles.Product, className)}>
