@@ -22,9 +22,7 @@ if (root) {
     .render(
       <Provider store={store}>
         <BrowserRouter>
-          <StrictMode>
             <App />
-          </StrictMode>
         </BrowserRouter>
       </Provider>,
     );

@@ -45,6 +45,8 @@
   font-weight: 700;
   font-size: $font-size-tab;
 
+  z-index: 1;
+
   &_arrow {
     position: absolute;
     left: 50%;
