@@ -25,8 +25,6 @@ const Categorie: React.FC<ICategorie> = ({ id, name, products }) => {
     }
   }, [isVisible]);
 
-  console.log(isVisible, name);
-
   return (
     <div
       ref={ref}

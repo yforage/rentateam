@@ -12,6 +12,7 @@ const app = express();
 app.use(express.static(buildPath));
 
 app.post('/order', (request, response) => {
+  console.log('Order recieved', request.body);
 });
 
 app.get('/products', (request, response) => {
