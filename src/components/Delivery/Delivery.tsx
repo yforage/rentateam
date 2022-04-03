@@ -3,6 +3,7 @@ import Address from 'components/Address';
 import Button from 'components/Button';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { filterCart } from 'store/cart/cartSlice';
 import { PickupOptions, selectPickup } from 'store/pickup/pickupSlice';
 import { RootState } from 'store/rootReducer';
 import styles from './Delivery.module.scss';
@@ -14,6 +15,7 @@ const Delivery: React.FC = () => {
 
   const handleClick = (value: PickupOptions) => {
     dispatch(selectPickup(value));
+    dispatch(filterCart(value));
   };
 
   return (

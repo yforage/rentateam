@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { PickupOptions } from 'store/pickup/pickupSlice';
 import { IProduct } from 'store/products/types';
 import { ISendOrder } from './types';
 
@@ -22,12 +23,25 @@ const cartSlice = createSlice({
     removeFromCart: (state, action: PayloadAction<number>) => {
       state.splice(state.findIndex((product) => product.id === action.payload), 1);
     },
+    filterCart: (state, action: PayloadAction<PickupOptions>) => {
+      return state.filter((product) => action.payload === 'delivery' ? product.delivery : true);
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(sendOrder.fulfilled, (state, action) => []);
   },
 });
 
-export const { addToCart, removeFromCart } = cartSlice.actions;
+/*
+  delivery | pickup
+
+  delivery: true
+
+  delivery: false
+
+  delivery: true
+*/
+
+export const { addToCart, removeFromCart, filterCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

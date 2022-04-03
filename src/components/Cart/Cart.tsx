@@ -7,10 +7,8 @@ import styles from './Cart.module.scss';
 
 const Cart: React.FC = () => {
   const cart = useSelector((state: RootState) => state.cart);
-  const isDelivery = useSelector((state: RootState) => state.pickup);
 
   const cartCost = cart
-    .filter((product) => (isDelivery ? product.delivery : true))
     .reduce((acc, curr) => {
       acc += curr.price;
       return acc;
