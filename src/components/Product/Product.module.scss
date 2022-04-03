@@ -18,6 +18,10 @@
     color: $text-header;
   }
 
+  &_display {
+    position: relative;
+  }
+
   &_image {
     position: relative;
     width: 208px;
