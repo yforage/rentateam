@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+
 const categories = require('./data/categories.json');
 const products = require('./data/products.json');
 
@@ -11,8 +12,10 @@ const app = express();
 
 app.use(express.static(buildPath));
 
+app.use(express.json());
+
 app.post('/order', (request, response) => {
-  console.log('Order recieved', request.body);
+  response.send(request.body);
 });
 
 app.get('/products', (request, response) => {
