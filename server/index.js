@@ -26,4 +26,4 @@ app.get('*', (request, response) => {
   response.sendFile(path.resolve(buildPath, 'index.html'));
 });
 
-app.listen(PORT);
+app.listen(PORT, '0.0.0.0');
