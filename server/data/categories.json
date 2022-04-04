@@ -1,17 +1,62 @@
 [
   {
     "id": 1,
-    "name": "Burgers",
-    "products": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    "name": "Buckets",
+    "products": [1, 2, 3, 4, 5, 6, 7, 8]
   },
   {
     "id": 2,
-    "name": "Wraps",
-    "products": [15, 16, 17, 18, 19, 20, 21]
+    "name": "Burgers",
+    "products": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
   },
   {
     "id": 3,
+    "name": "Wraps",
+    "products": [22, 23, 24, 25, 26, 27, 28, 29]
+  },
+  {
+    "id": 4,
     "name": "French fries and snacks",
-    "products": [22, 23, 24, 25, 26, 27]
+    "products": [30, 31, 32, 33, 34, 35]
+  },
+  {
+    "id": 5,
+    "name": "Juicy chicken",
+    "products": [36, 37, 38, 39, 40, 41, 42]
+  },
+  {
+    "id": 6,
+    "name": "Sauces",
+    "products": [43, 44, 45, 46, 47, 48, 49]
+  },
+  {
+    "id": 7,
+    "name": "Cold Drinks",
+    "products": [50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66]
+  },
+  {
+    "id": 8,
+    "name": "Ice Cream",
+    "products": [67, 68, 69, 70, 71, 72, 73, 74, 75]
+  },
+  {
+    "id": 9,
+    "name": "Milkshakes",
+    "products": [76, 77, 78]
+  },
+  {
+    "id": 10,
+    "name": "Desserts",
+    "products": [79, 80, 81, 82, 83, 84]
+  },
+  {
+    "id": 11,
+    "name": "Coffee and tea",
+    "products": [85, 86, 87, 88, 89, 90, 91, 92]
+  },
+  {
+    "id": 12,
+    "name": "LunchBuckets",
+    "products": [93, 94]
   }
 ]
