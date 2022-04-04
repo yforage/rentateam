@@ -39,13 +39,13 @@ const Product: React.FC<ProductProps> = ({ className, product }) => {
   }, []);
 
   const ref = useRef<HTMLImageElement>(null);
-  const isImageVisible = useOnScreen(ref, '100px');
+  const isLoaded = useOnScreen(ref, '100px', true);
 
   return (
     <div className={classNames(styles.Product, className)}>
       <div className={styles.Product_display}>
         <div className={styles.Product_image} ref={ref}>
-          {isImageVisible && <img className={styles.Product_image_src} src={img} alt={product.name} />}
+          {isLoaded && <img className={styles.Product_image_src} src={img} alt={product.name} />}
         </div>
         {hit && <Sticker className={styles.Product_sticker} type="hit" />}
         {newProduct && <Sticker className={styles.Product_sticker} type="new" />}
