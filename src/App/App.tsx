@@ -1,16 +1,15 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import Categories from 'components/Categories';
-import Footer from 'components/Footer';
-import Header from 'components/Header';
 import styles from './App.module.scss';
+import OrderPage from './pages/OrderPage';
 
-function App() {
+const App = () => {
   return (
     <div className={styles.fullViewportHeight}>
-      <Header />
-      <Categories />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<OrderPage />} />
+      </Routes>
     </div>
   );
 }
