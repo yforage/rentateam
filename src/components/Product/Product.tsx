@@ -45,7 +45,7 @@ const Product: React.FC<ProductProps> = ({ className, product }) => {
     <div className={classNames(styles.Product, className)}>
       <div className={styles.Product_display}>
         <div className={styles.Product_image} ref={ref}>
-          {isImageVisible && <img className={styles.Product_image_src} src={img} alt={product.name} loading="lazy" />}
+          {isImageVisible && <img className={styles.Product_image_src} src={img} alt={product.name} />}
         </div>
         {hit && <Sticker className={styles.Product_sticker} type="hit" />}
         {newProduct && <Sticker className={styles.Product_sticker} type="new" />}
