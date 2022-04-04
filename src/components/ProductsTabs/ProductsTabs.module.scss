@@ -4,6 +4,9 @@
   margin-top: 71px;
   padding-top: 12px;
 
+  overflow-y: scroll;
+  white-space: nowrap;
+
   z-index: 1;
   display: flex;
   gap: 30px;

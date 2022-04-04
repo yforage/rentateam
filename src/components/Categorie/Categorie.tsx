@@ -42,7 +42,7 @@ const Categorie: React.FC<ICategorie> = ({ id, name, products }) => {
           {currentProducts.map((product) => (
             <Product
               className={styles.Categorie_products_item}
-              key={product.id}
+              key={`product-${product.id}`}
               product={product}
             />
           ))}
