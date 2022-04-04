@@ -6,7 +6,13 @@ import Logo from 'components/Logo';
 import React, { useEffect, useState } from 'react';
 import styles from './Footer.module.scss';
 
-const data = require('./data.json');
+
+type FooterInfo = {
+  title: string;
+  links: string[];
+}
+
+const data: FooterInfo[] = require('./data.json');
 
 const Footer: React.FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -19,15 +25,24 @@ const Footer: React.FC = () => {
   }, []);
 
   const isDesktop = width > 1000;
+  const iconIndex = data.length / 2;
 
   return (
     <div className={classNames(styles.Footer, 'content')}>
+      <div className={styles.Footer_stripes}>
+        <div className={styles.Footer_stripes_block} />
+        <div className={styles.Footer_stripes_block} />
+        <div className={styles.Footer_stripes_block} />
+        <div className={styles.Footer_stripes_block} />
+        <div className={styles.Footer_stripes_block} />
+      </div>
       <div className={styles.Footer_info}>
-        <InfoSection data={data[0]} />
-        <InfoSection data={data[1]} />
-        {isDesktop && <Logo icon={<BrandIcon />} />}
-        <InfoSection data={data[2]} />
-        <InfoSection data={data[3]} />
+        {data.map((json: FooterInfo, index) => (
+          <React.Fragment key={json.title}>
+            {index === iconIndex && isDesktop && <Logo icon={<BrandIcon />} />}
+            <InfoSection data={json} />
+          </React.Fragment>
+        ))}
       </div>
       <Links className={styles.Footer_links} />
     </div>

@@ -1,10 +1,12 @@
+@import 'styles/variables.scss';
+
 .Footer {
   padding-bottom: 75px;
 
   &_info {
     display: flex;
     justify-content: space-between;
-    padding-top: 150px;
+    margin-top: 80px;
     flex-wrap: wrap;
 
     @media (max-width: 800px) {
@@ -15,5 +17,21 @@
 
   &_links {
     margin-top: 120px;
+  }
+
+  &_stripes {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    &_block {
+      width: 32px;
+      height: 71px;
+
+      &:nth-child(odd) {
+        background-color: $color-accent;
+      }
+    }
   }
 }

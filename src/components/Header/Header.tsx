@@ -8,6 +8,13 @@ import styles from './Header.module.scss';
 
 const Header: React.FC = () => (
   <div className={classNames(styles.Header, 'content')}>
+    <div className={styles.Header_stripes}>
+      <div className={styles.Header_stripes_block} />
+      <div className={styles.Header_stripes_block} />
+      <div className={styles.Header_stripes_block} />
+      <div className={styles.Header_stripes_block} />
+      <div className={styles.Header_stripes_block} />
+    </div>
     <div className={styles.Header_top}>
       <Button icon={<DrawerIcon />} />
       <Cart />
