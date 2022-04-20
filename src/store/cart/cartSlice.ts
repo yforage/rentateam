@@ -23,24 +23,12 @@ const cartSlice = createSlice({
     removeFromCart: (state, action: PayloadAction<number>) => {
       state.splice(state.findIndex((product) => product.id === action.payload), 1);
     },
-    filterCart: (state, action: PayloadAction<PickupOptions>) => {
-      return state.filter((product) => action.payload === 'delivery' ? product.delivery : true);
-    }
+    filterCart: (state, action: PayloadAction<PickupOptions>) => state.filter((product) => (action.payload === 'delivery' ? product.delivery : true)),
   },
   extraReducers: (builder) => {
-    builder.addCase(sendOrder.fulfilled, (state, action) => []);
+    builder.addCase(sendOrder.fulfilled, () => []);
   },
 });
-
-/*
-  delivery | pickup
-
-  delivery: true
-
-  delivery: false
-
-  delivery: true
-*/
 
 export const { addToCart, removeFromCart, filterCart } = cartSlice.actions;
 

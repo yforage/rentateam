@@ -11,6 +11,7 @@ export const getProducts = createAsyncThunk(
     if (response.statusText === 'OK') {
       return response.data;
     }
+    return response.statusText;
   },
 );
 

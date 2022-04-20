@@ -6,11 +6,10 @@ import Logo from 'components/Logo';
 import React, { useEffect, useState } from 'react';
 import styles from './Footer.module.scss';
 
-
 type FooterInfo = {
   title: string;
   links: string[];
-}
+};
 
 const data: FooterInfo[] = require('./data.json');
 

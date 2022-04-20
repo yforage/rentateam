@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import { RootState } from 'store/rootReducer';
 import classNames from 'classnames';
 import Button from 'components/Button';
-import styles from './ProductsTabs.module.scss';
 import { PickupOptions } from 'store/pickup/pickupSlice';
+import styles from './ProductsTabs.module.scss';
 
 const ProductsTabs: React.FC = () => {
   const selectedTab = useSelector((state: RootState) => state.categories.selected);
@@ -23,21 +23,23 @@ const ProductsTabs: React.FC = () => {
     <div className={classNames(styles.ProductsTabs, 'content')}>
       {categories.map(({ id, name, products }) => {
         const availableProducts = products.filter(
-          (productId) => isDelivery ? allProducts[productId].delivery === true : true);
-        if (!availableProducts.length) return;
+          (productId) => (isDelivery ? allProducts[productId].delivery === true : true),
+        );
+        if (!availableProducts.length) return null;
         return (
-        <Button
-          value={id.toString()}
-          onClick={handleScroll}
-          className={classNames(
-            styles.ProductsTabs_button,
-            { [styles.ProductsTabs_selected]: selectedTab === id },
-          )}
-          key={`product-tab-${id}`}
-        >
-          {name}
-        </Button>
-      )})}
+          <Button
+            value={id.toString()}
+            onClick={handleScroll}
+            className={classNames(
+              styles.ProductsTabs_button,
+              { [styles.ProductsTabs_selected]: selectedTab === id },
+            )}
+            key={`product-tab-${id}`}
+          >
+            {name}
+          </Button>
+        );
+      })}
     </div>
   );
 };

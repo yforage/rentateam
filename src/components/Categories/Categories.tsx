@@ -17,16 +17,19 @@ const Categories: React.FC = () => {
       <ProductsTabs />
       <div className={styles.Categories}>
         {categoriesProducts.map(({ id, name, products }) => {
-          const availableProducts = products.filter((id) => isDelivery ? allProducts[id].delivery === true : true);
-          if (!availableProducts.length) return;
+          const availableProducts = products.filter(
+            (productId) => (isDelivery ? allProducts[productId].delivery === true : true),
+          );
+          if (!availableProducts.length) return null;
           return (
-          <Categorie
-            key={`categorie-${id}`}
-            id={id}
-            name={name}
-            products={products}
-          />
-        )})}
+            <Categorie
+              key={`categorie-${id}`}
+              id={id}
+              name={name}
+              products={products}
+            />
+          );
+        })}
       </div>
     </>
   );

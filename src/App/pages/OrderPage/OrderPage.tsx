@@ -21,6 +21,6 @@ const OrderPage: React.FC = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default React.memo(OrderPage);
