@@ -11,6 +11,16 @@ body {
 	margin: 0;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: $border-radius-button;       
+  background-color: $color-accent;
+	height: 60px;
+}
+
 button {
 	background: none;
 	color: inherit;
