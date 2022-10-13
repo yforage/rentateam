@@ -67,7 +67,8 @@
     "react-redux": "^7.2.7",
     "react-router-dom": "6",
     "redux": "^4.1.2",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "vercel": "^28.4.10"
   },
   "engines": {
     "node": ">=16.13.0"
