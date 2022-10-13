@@ -10,7 +10,7 @@
     "start:react": "NODE_ENV=development npx webpack serve --mode=development",
     "build": "NODE_ENV=production npx webpack --mode=production",
     "ts-check": "tsc --skipLibCheck --noEmit --project tsconfig.json",
-    "deploy": "git push heroku master"
+    "deploy": "yarn vercel --prod"
   },
   "browserslist": [
     "last 1 version",
