@@ -5,7 +5,8 @@
   "author": "yforage",
   "license": "MIT",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "yarn start:server & yarn start:react",
+    "start:server": "node server/index.js",
     "start:react": "NODE_ENV=development npx webpack serve --mode=development",
     "build": "NODE_ENV=production npx webpack --mode=production",
     "ts-check": "tsc --skipLibCheck --noEmit --project tsconfig.json",
