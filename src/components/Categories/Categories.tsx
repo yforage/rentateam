@@ -1,4 +1,5 @@
 import Categorie from 'components/Categorie';
+import Loader from 'components/Loader';
 import ProductsTabs from 'components/ProductsTabs';
 import React from 'react';
 import { useSelector } from 'react-redux';
@@ -18,7 +19,7 @@ const Categories: React.FC = () => {
       <div className={styles.Categories}>
         {categoriesProducts.map(({ id, name, products }) => {
           const availableProducts = products.filter(
-            (productId) => (isDelivery ? allProducts[productId].delivery === true : true),
+            (productId) => (isDelivery ? allProducts[productId]?.delivery === true : true),
           );
           if (!availableProducts.length) return null;
           return (
@@ -30,6 +31,7 @@ const Categories: React.FC = () => {
             />
           );
         })}
+        {!categoriesProducts.length && <Loader />}
       </div>
     </>
   );

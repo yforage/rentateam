@@ -17,7 +17,7 @@ const Categorie: React.FC<ICategorie> = ({ id, name, products }) => {
 
   const currentProducts = allProducts
     .filter((product) => products.includes(product.id))
-    .filter((product) => (isDelivery ? product.delivery === true : true));
+    .filter((product) => (isDelivery ? product?.delivery === true : true));
 
   const dispatch = useDispatch();
 

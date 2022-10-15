@@ -19,11 +19,13 @@ const ProductsTabs: React.FC = () => {
     categorie?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  if (!categories.length) return null;
+
   return (
     <div className={classNames(styles.ProductsTabs, 'content')}>
       {categories.map(({ id, name, products }) => {
         const availableProducts = products.filter(
-          (productId) => (isDelivery ? allProducts[productId].delivery === true : true),
+          (productId) => (isDelivery ? allProducts[productId]?.delivery === true : true),
         );
         if (!availableProducts.length) return null;
         return (
