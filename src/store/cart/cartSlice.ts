@@ -9,7 +9,7 @@ const initialState: IProduct[] = [];
 export const sendOrder = createAsyncThunk(
   'cart/sendOrder',
   async (payload: ISendOrder) => {
-    await axios.post('/order', payload);
+    await axios.post('/api/order', payload);
   },
 );
 

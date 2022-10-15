@@ -10,11 +10,8 @@ const initialState: ICategories = {
 export const getCategories = createAsyncThunk(
   'categories/getCategories',
   async () => {
-    const response = await axios.get('/categories');
-    if (response.statusText === 'OK') {
-      return response.data;
-    }
-    return response.statusText;
+    const response = await axios.get('/api/categories');
+    return response.data;
   },
 );
 
@@ -27,8 +24,10 @@ const categoriesSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(getCategories.fulfilled, (state, action: PayloadAction<ICategorie[]>) => {
-      state.categories = action.payload;
+    builder.addCase(getCategories.fulfilled, (state, { payload }: PayloadAction<ICategorie[]>) => {
+      if (Array.isArray(payload)) {
+        state.categories = payload;
+      }
     });
   },
 });

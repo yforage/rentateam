@@ -7,11 +7,8 @@ const initialState: IProduct[] = [];
 export const getProducts = createAsyncThunk(
   'products/getProducts',
   async () => {
-    const response = await axios.get('/products');
-    if (response.statusText === 'OK') {
-      return response.data;
-    }
-    return response.statusText;
+    const response = await axios.get('/api/products');
+    return response.data;
   },
 );
 
@@ -20,7 +17,9 @@ const productsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getProducts.fulfilled, (state, { payload }) => payload);
+    builder.addCase(getProducts.fulfilled, (state, { payload }) => {
+      if (Array.isArray(payload)) return payload;
+    });
   },
 });
 

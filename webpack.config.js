@@ -87,13 +87,9 @@ module.exports = {
   },
   devServer: {
     host: 'localhost',
-    port: 3000,
+    port: 3002,
     static: publicPath,
     hot: true,
     historyApiFallback: true,
-    proxy: [{
-      context: ['/products', '/categories', '/order'],
-      target: 'http://localhost:3001',
-    }],
   },
 };
